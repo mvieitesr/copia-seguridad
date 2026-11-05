@@ -1,0 +1,4 @@
+# Secretos y configuracion local
+.env
+# Ficheros log
+*.log
