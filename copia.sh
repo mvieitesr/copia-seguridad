@@ -1,9 +1,9 @@
 #!/bin/bash
 #Copia de seguridad de una carpeta en un .tar.gz con fecha
-DESTINO="${DESTINO:-$HOME/copias}"
+COPIA_DESTINO="${COPIA_DESTINO:-$HOME/copias}"
 
 if [ "$1" = "--lista" ]; then
-  ls -1 "$DESTINO"
+  ls -1 "$COPIA_DESTINO"
   exit 0
 fi
 
@@ -14,8 +14,8 @@ fi
 
 
 
-mkdir -p "$DESTINO"
-FICHERO="$DESTINO/copia-$(date +%Y%m%d-%H%M%S).tar.gz"
+mkdir -p "$COPIA_DESTINO"
+FICHERO="$COPIA_DESTINO/copia-$(date +%Y%m%d-%H%M%S).tar.gz"
 tar -czf "$FICHERO" -C "$1" .
 echo "Copia creada: $FICHERO"
 ls -liha "$FICHERO"
