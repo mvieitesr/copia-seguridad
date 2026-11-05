@@ -4,3 +4,5 @@ DESTINO="${DESTINO:-$HOME/copias}"
 mkdir -p "$DESTINO"
 FICHERO="$DESTINO/copia-$(date +%Y%m%d-%H%M%S).tar.gz"
 tar -czf "$FICHERO" -C "$1" .
+echo "Copia creada: $FICHERO"
+ls -lh "$FICHERO"
