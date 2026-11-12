@@ -7,3 +7,4 @@ tar -czf "$FICHERO" -C "$1" .
 echo "Copia creada: $FICHERO"
 ls -lh "$FICHERO"
 sha256sum "$FICHERO"
+echo "Limpieza"
